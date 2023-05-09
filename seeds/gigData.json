@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Denver Jazz Club",
+        "location": "Denver, CO",
+        "date": "November 22, 2023",
+        "capacity": 50,
+        "admission": 10,
+        "description": "Come listen to some jazz in Denver. I'll try not to solo for half an hour at a time this time.",
+        "musician_id": 1
+    },
+    {
+        "name": "Rio LLC",
+        "location": "Rio de Janiero, Brazil",
+        "date": "August 12, 2023",
+        "capacity": 50,
+        "admission": 5,
+        "description": "Experimente os ritmos emocionantes e sons autênticos do Brasil com o nosso talentoso músico! Reunindo uma mistura de influências tradicionais e contemporâneas, o nosso artista oferece performances cativantes que irão transportá-lo para o coração do Brasil. De locais intimistas a festivais animados, o nosso músico traz um sabor único a qualquer evento. Reserve agora e descubra a beleza da música brasileira!",
+        "musician_id": 2
+    },
+    {
+        "name": "Sydney Opera House",
+        "location": "Sydney, AUS",
+        "date": "October 3, 2023",
+        "capacity": 2679,
+        "admission": 150,
+        "description": "Zoe at the Sydney Opera House",
+        "musician_id": 3
+    },
+    {
+        "name": "BC Place Stadium",
+        "location": "Vancouver, BC, Canada",
+        "date": "December 1, 2023",
+        "capacity": 54500,
+        "admission": 10,
+        "description": "Big Concert for cheap come have some fun with us :)",
+        "musician_id": 4
+    },
+    {
+        "name": "Busking in Dubai",
+        "location": "Dubai, UAE",
+        "date": "February 14, 2024",
+        "capacity": 20,
+        "admission": 0,
+        "description": "Clasic rock busking for free on the streets of Dubai",
+        "musician_id": 5
+    },
+    {
+        "name": "Zoe at Lincoln Center",
+        "location": "Lincoln Center, New York, New York",
+        "date": "April 9, 2024",
+        "capacity": 3800,
+        "admission": 100,
+        "description": "Opera at the Lincoln Center",
+        "musician_id": 3
+    }
+]

@@ -1,0 +1,62 @@
+[
+    {
+        "musician_id": 1,
+        "instrument_id": 1
+    },
+    {
+        "musician_id": 1,
+        "instrument_id": 2
+    },
+    {
+        "musician_id": 1,
+        "instrument_id": 5
+    },
+    {
+        "musician_id": 2,
+        "instrument_id": 1
+    },
+    {
+        "musician_id": 2,
+        "instrument_id": 2
+    },
+    {
+        "musician_id": 3,
+        "instrument_id": 8
+    },
+    {
+        "musician_id": 4,
+        "instrument_id": 1
+    },
+    {
+        "musician_id": 4,
+        "instrument_id": 2
+    },
+    {
+        "musician_id": 4,
+        "instrument_id": 3
+    },
+    {
+        "musician_id": 4,
+        "instrument_id": 4
+    },
+    {
+        "musician_id": 4,
+        "instrument_id": 5
+    },
+    {
+        "musician_id": 4,
+        "instrument_id": 6
+    },
+    {
+        "musician_id": 4,
+        "instrument_id": 7
+    },
+    {
+        "musician_id": 4,
+        "instrument_id": 8
+    },
+    {
+        "musician_id": 5,
+        "instrument_id": 2
+    }
+]
