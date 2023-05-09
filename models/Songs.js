@@ -20,10 +20,10 @@ Songs.init(
             allowNull: false,
         },
         genre: {
-            type: DataTypes.VARCHAR(30),
+            type: DataTypes.STRING(30),
         },
         originalAuthor: {
-            type: DataTypes.VARCHAR(30),
+            type: DataTypes.STRING(30),
         }
     },
     {
