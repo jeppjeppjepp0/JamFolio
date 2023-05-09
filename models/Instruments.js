@@ -27,6 +27,6 @@ Instruments.init(
         underscored: true,
         modelName: 'project',
     }
-)
+);
 
 module.exports = Instruments;

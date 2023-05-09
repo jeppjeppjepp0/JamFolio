@@ -51,6 +51,6 @@ Musicians.init(
         underscored: true,
         modelName: 'project',
     }
-)
+);
 
 module.exports = Musicians;
