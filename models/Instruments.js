@@ -16,7 +16,7 @@ Instruments.init(
             allowNull: false,
         },
         description: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
     },
@@ -25,7 +25,7 @@ Instruments.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'project',
+        modelName: 'instruments',
     }
 );
 

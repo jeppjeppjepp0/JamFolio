@@ -31,7 +31,7 @@ Gigs.init(
             allowNull: false,
         },
         description: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         musician_id: {
@@ -47,7 +47,7 @@ Gigs.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'project',
+        modelName: 'gigs',
     }
 );
 
