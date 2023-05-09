@@ -12,9 +12,16 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Dashboard</a>
         </li>
+
+        {{#if logged_in}}
         <li class="nav-item">
           <a class="nav-link" href="#">Log out</a>
         </li>
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="#">Log In</a>
+        </li>
+        {{/if}}
       </ul>
      
     </div>
