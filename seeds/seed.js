@@ -27,8 +27,6 @@ const seedDatabase = async () => {
 
     const musSong = await MusicianSongs.bulkCreate(musSongLink);
 
-
-
     process.exit(0);
 };
 

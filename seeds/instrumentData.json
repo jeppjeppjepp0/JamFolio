@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Piano",
+        "description": "A keyboard instrument with hammers that strike strings, producing a wide range of notes and dynamics. It is used in many different styles of music, including classical, jazz, and pop."
+    },
+    {
+        "name": "Guitar",
+        "description": "A stringed instrument with a flat or curved body, typically played with the fingers or a pick. It is used in many different styles of music, including folk, blues, rock, and pop."
+    },
+    {
+        "name": "Violin",
+        "description": "A stringed instrument played with a bow, producing a high-pitched sound. It is commonly used in classical music, but also has a place in folk, jazz, and other genres."
+    },
+    {
+        "name": "Drums",
+        "description": "A percussion instrument consisting of a set of drums and cymbals, played with sticks or other tools. They are used in many different styles of music, including rock, jazz, and pop."
+    },
+    {
+        "name": "Bass",
+        "description": "A stringed instrument used in rock, jazz, and funk to provide a rhythmic and harmonic foundation. Typically has four or five strings and produces sound through magnetic pickups that convert string vibrations into an electrical signal."
+    },
+    {
+        "name": "Trumpet",
+        "description": "A brass instrument with a flared bell and three valves, producing a bright, clear sound. It is commonly used in classical music, but also has a place in jazz and other genres."
+    },
+    {
+        "name": "Saxophone",
+        "description": "A woodwind instrument with a curved body and single reed mouthpiece, used in jazz, classical, and pop music. Comes in different sizes and is known for its expressive and versatile sound, from smooth melodies to percussive sounds."
+    },
+    {
+        "name": "Voice",
+        "description": "It's vocals I don't know how else to tell you that"
+    }
+]
