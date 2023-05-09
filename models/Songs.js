@@ -12,7 +12,7 @@ Songs.init(
             autoIncrement: true,
         },
         name: {
-            type: DataTypes.VARCHAR(30),
+            type: DataTypes.STRING(30),
             allowNull: false,
         },
         description: {
@@ -20,10 +20,10 @@ Songs.init(
             allowNull: false,
         },
         genre: {
-            type: DataTypes.VARCHAR(30),
+            type: DataTypes.STRING(30),
         },
         originalAuthor: {
-            type: DataTypes.VARCHAR(30),
+            type: DataTypes.STRING(30),
         }
     },
     {
@@ -31,7 +31,7 @@ Songs.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'project',
+        modelName: 'songs',
     }
 );
 

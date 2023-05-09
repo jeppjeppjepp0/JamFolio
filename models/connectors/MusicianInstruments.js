@@ -31,7 +31,7 @@ MusicianInstruments.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'trip'
+        modelName: 'musicianinstruments'
     }
 );
 

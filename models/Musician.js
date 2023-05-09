@@ -12,7 +12,7 @@ Musician.init(
             autoIncrement: true,
         },
         name: {
-            type: DataTypes.VARCHAR(30),
+            type: DataTypes.STRING(30),
             allowNull: false,
         },
         email: {
@@ -49,7 +49,7 @@ Musician.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'project',
+        modelName: 'musician',
     }
 );
 

@@ -12,7 +12,7 @@ Gigs.init(
             autoIncrement: true,
         },
         name: {
-            type: DataTypes.VARCHAR(30),
+            type: DataTypes.STRING(30),
             allowNull: false,
         },
         location: {
@@ -24,10 +24,10 @@ Gigs.init(
             allowNull: false,
         },
         capacity: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
         },
         admission: {
-            type: DataType.DECIMAL,
+            type: DataTypes.DECIMAL,
             allowNull: false,
         },
         description: {
@@ -37,7 +37,7 @@ Gigs.init(
         musician_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'musicians',
+                model: 'musician',
                 key: 'id',
             }
         },
@@ -47,7 +47,7 @@ Gigs.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'project',
+        modelName: 'gigs',
     }
 );
 
