@@ -3,7 +3,6 @@ const Instruments = require('./Instruments.js');
 const Songs = require('./Songs.js');
 const Gigs = require('./Gigs.js');
 const MusicianInstruments = require('./connectors/MusicianInstruments.js');
-const Gigs = require('./Gigs.js');
 const MusicianSongs = require('./connectors/MusicianSongs.js');
 
 
@@ -51,5 +50,7 @@ Songs.belongsToMany(Musician, {
 module.exports = { Musician, 
                    Instruments,
                    Songs,
-                   Gigs
+                   Gigs,
+                   MusicianInstruments,
+                   MusicianSongs
                 };
