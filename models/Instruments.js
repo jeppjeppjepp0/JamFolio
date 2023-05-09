@@ -12,7 +12,7 @@ Instruments.init(
             autoIncrement: true,
         },
         name: {
-            type: DataTypes.VARCHAR(30),
+            type: DataTypes.STRING(30),
             allowNull: false,
         },
         description: {
