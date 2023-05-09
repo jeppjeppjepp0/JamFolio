@@ -5,7 +5,7 @@
         "date": "November 22, 2023",
         "capacity": 50,
         "admission": 10,
-        "description": "Come listen to some jazz in Denver. I'll try not to solo for half an hour at a time this time.",
+        "description": "Come listen to some jazz in Denver.",
         "musician_id": 1
     },
     {
@@ -14,7 +14,7 @@
         "date": "August 12, 2023",
         "capacity": 50,
         "admission": 5,
-        "description": "Experimente os ritmos emocionantes e sons autênticos do Brasil com o nosso talentoso músico! Reunindo uma mistura de influências tradicionais e contemporâneas, o nosso artista oferece performances cativantes que irão transportá-lo para o coração do Brasil. De locais intimistas a festivais animados, o nosso músico traz um sabor único a qualquer evento. Reserve agora e descubra a beleza da música brasileira!",
+        "description": "Experimente os ritmos emocionantes e sons autênticos do Brasil.",
         "musician_id": 2
     },
     {
@@ -46,7 +46,7 @@
     },
     {
         "name": "Zoe at Lincoln Center",
-        "location": "Lincoln Center, New York, New York",
+        "location": "Lincoln Center, New York",
         "date": "April 9, 2024",
         "capacity": 3800,
         "admission": 100,
