@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <img src="public/assets/Screenshot 2023-05-08 at 12.19.14 PM.png"/>
+    <a class="navbar-brand" href="#">Welcome to JamFolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+
+        {{#if logged_in}}
+        <li class="nav-item">
+          <a class="nav-link" href="#">Log out</a>
+        </li>
+        {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="#">Log In</a>
+        </li>
+        {{/if}}
+      </ul>
+     
+    </div>
+  </div>
+</nav>
