@@ -34,6 +34,13 @@ Gigs.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        musician_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'musicians',
+                key: 'id',
+            }
+        },
     },
     {
         sequelize,
