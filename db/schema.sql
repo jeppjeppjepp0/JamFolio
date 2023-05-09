@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS jamfolio_db;
+CREATE DATABASE jamfolio_db;
