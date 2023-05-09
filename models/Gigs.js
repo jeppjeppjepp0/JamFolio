@@ -24,10 +24,10 @@ Gigs.init(
             allowNull: false,
         },
         capacity: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
         },
         admission: {
-            type: DataType.DECIMAL,
+            type: DataTypes.DECIMAL,
             allowNull: false,
         },
         description: {
