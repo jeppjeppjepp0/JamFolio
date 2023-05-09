@@ -37,7 +37,7 @@ Gigs.init(
         musician_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'musicians',
+                model: 'musician',
                 key: 'id',
             }
         },
@@ -47,7 +47,7 @@ Gigs.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'project',
+        modelName: 'gigs',
     }
 );
 
