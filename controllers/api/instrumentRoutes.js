@@ -13,6 +13,30 @@ router.get('/', async (req, res) => {
       res.status(500).json({ error: 'Failed to retrieve instruments.' });
     }
   });
+
+// API endpoint to get instruments by its ID
+router.get('/:id', async (req, res) => {
+    try {
+        const instrumentId = req.params.id;
+        const instrument = await Instruments.findOne({
+            where: { id: instrumentId },
+            attributes: ['id', 'name', 'description']
+        });
+
+        if (!instrument) {
+            return res.status(404).json({
+                message: 'Instrument not found'
+            });
+        }
+
+        res.status(200).json(instrument);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            message: 'Something went wrong'
+        });
+    }
+});
   
 // API endpoint to get instruments of a specific musician
 router.get('/:id/instruments', async (req, res) => {
@@ -53,5 +77,7 @@ router.get('/:id/instruments', async (req, res) => {
         });
     }
 });
+
+
 
 module.exports = router;
