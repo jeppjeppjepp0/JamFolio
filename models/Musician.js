@@ -2,6 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
+
 class Musician extends Model {};
 
 Musician.init(
@@ -12,7 +13,11 @@ Musician.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
+        first_name: {
+            type: DataTypes.STRING(30),
+            allowNull: false,
+        },
+        last_name: {
             type: DataTypes.STRING(30),
             allowNull: false,
         },
@@ -32,7 +37,7 @@ Musician.init(
             },
         },
         description: {
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING,
         },
     },
     {

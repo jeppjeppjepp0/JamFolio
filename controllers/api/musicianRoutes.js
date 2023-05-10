@@ -6,11 +6,11 @@ const bcrypt = require('bcrypt');
 // Signup route
 router.post('/signup', async (req, res) => {
   try {
-    const { name, email, password } = req.body;
+    const { first_name, last_name, email, password, description } = req.body;
 
     // Check if name, email, and password are provided
-    if (!name || !email || !password) {
-      return res.status(400).json({ error: 'Name, email, and password are required.' });
+    if (!first_name || !last_name || !email || !password || !description) {
+      return res.status(400).json({ error: 'first name, last name, email, password and description are required.' });
     }
 
     // Check if musician already exists
@@ -20,7 +20,7 @@ router.post('/signup', async (req, res) => {
     }
 
     // Create new musician
-    const newMusician = await Musician.create({ name, email, password });
+    const newMusician = await Musician.create({ first_name, last_name, email, password, description });
     return res.status(201).json(newMusician);
   } catch (error) {
     console.error(error);
@@ -69,5 +69,47 @@ router.post('/logout', async (req, res) => {
   req.session.destroy();
   res.status(200).json({ message: 'Session cleared.' });
 });
+
+
+// Get all musicians
+
+router.get('/', async (req, res) => {
+  try {
+    const musicians = await Musician.findAll({
+      attributes: ['id', 'first_name', 'last_name', 'email', 'description']
+    });
+    res.status(200).json(musicians);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Failed to retrieve musicians.' });
+  }
+});
+
+// Get musician by Id
+
+router.get('/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const musician = await Musician.findByPk(id, {
+      attributes: ['id', 'first_name', 'last_name', 'email', 'description']
+    });
+    if (!musician) {
+      return res.status(404).json({ error: 'Musician not found.' });
+    }
+    res.status(200).json(musician);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Failed to retrieve musician.' });
+  }
+});
+
+
+
+// Get all musician for given instrument
+// To be implemented by Aarti
+
+// Get all musician for given Genre
+// To be implemented by Aarti
 
 module.exports = router;
