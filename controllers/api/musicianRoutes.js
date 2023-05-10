@@ -75,12 +75,41 @@ router.post('/logout', async (req, res) => {
 
 router.get('/', async (req, res) => {
   try {
-    const musicians = await Musician.findAll();
+    const musicians = await Musician.findAll({
+      attributes: ['id', 'first_name', 'last_name', 'email', 'description']
+    });
     res.status(200).json(musicians);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Failed to retrieve musicians.' });
   }
 });
+
+// Get musician by Id
+
+router.get('/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const musician = await Musician.findByPk(id, {
+      attributes: ['id', 'first_name', 'last_name', 'email', 'description']
+    });
+    if (!musician) {
+      return res.status(404).json({ error: 'Musician not found.' });
+    }
+    res.status(200).json(musician);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Failed to retrieve musician.' });
+  }
+});
+
+
+
+// Get all musician for given instrument
+// To be implemented by Aarti
+
+// Get all musician for given Genre
+// To be implemented by Aarti
 
 module.exports = router;
