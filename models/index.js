@@ -45,6 +45,7 @@ Songs.belongsToMany(Musician, {
         unique: false,
     },
     as: 'musicians' // Updated alias
+
 });
 
 // Add this association after the existing associations
