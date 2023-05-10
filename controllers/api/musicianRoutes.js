@@ -70,4 +70,17 @@ router.post('/logout', async (req, res) => {
   res.status(200).json({ message: 'Session cleared.' });
 });
 
+
+// Get all musicians
+
+router.get('/', async (req, res) => {
+  try {
+    const musicians = await Musician.findAll();
+    res.status(200).json(musicians);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Failed to retrieve musicians.' });
+  }
+});
+
 module.exports = router;
