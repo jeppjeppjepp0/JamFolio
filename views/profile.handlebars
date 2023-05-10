@@ -49,11 +49,27 @@
 </div>
 </div>
 {{!-- </div> --}}
-{{#if gigs.length}}
+{{!-- {{#if gigs.length}} --}}
 <div class="col-md-4">
        <!--third column : Upcoming gigs in Timeline-->
 
-       {{#each gig as |gig|}}
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Gig name: </label>
+  <input type="email" class="form-control" id="gig-name" placeholder="gig name">
+   <label for="exampleFormControlInput1" class="form-label">Date: </label>
+  <input type="email" class="form-control" id="gig-date" placeholder="gig-date">
+  <label for="exampleFormControlInput1" class="form-label">Place: </label>
+  <input type="email" class="form-control" id="gig-place" placeholder="gig-place">
+   <label for="exampleFormControlInput1" class="form-label">Capacity: </label>
+  <input type="email" class="form-control" id="gig-capacity" placeholder="gig-capacity">
+  <label for="exampleFormControlInput1" class="form-label">Ticket Price: </label>
+  <input type="email" class="form-control" id="gig-price" placeholder="gig-price">
+  <button class="signup-btn">Add this gig</button>
+</div>
+
+
+
+       {{!-- {{#each gig as |gig|}}
     <div class="timeline">
   <div class="container right">
     <div class="content">
@@ -63,7 +79,7 @@
       <p id="gig-price1">{{gig.[0].price}}</p>
       {{/each}}
     </div>
-    {{/if}}
+    {{/if}} --}}
   </div>
 
 </div>
