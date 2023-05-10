@@ -6,11 +6,11 @@ const bcrypt = require('bcrypt');
 // Signup route
 router.post('/signup', async (req, res) => {
   try {
-    const { name, email, password, description } = req.body;
+    const { first_name, last_name, email, password, description } = req.body;
 
     // Check if name, email, and password are provided
-    if (!name || !email || !password || !description) {
-      return res.status(400).json({ error: 'Name, email, password and description are required.' });
+    if (!first_name || !last_name || !email || !password || !description) {
+      return res.status(400).json({ error: 'first name, last name, email, password and description are required.' });
     }
 
     // Check if musician already exists
@@ -20,7 +20,7 @@ router.post('/signup', async (req, res) => {
     }
 
     // Create new musician
-    const newMusician = await Musician.create({ name, email, password, description });
+    const newMusician = await Musician.create({ first_name, last_name, email, password, description });
     return res.status(201).json(newMusician);
   } catch (error) {
     console.error(error);

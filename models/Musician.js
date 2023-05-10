@@ -13,7 +13,11 @@ Musician.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
+        first_name: {
+            type: DataTypes.STRING(30),
+            allowNull: false,
+        },
+        last_name: {
             type: DataTypes.STRING(30),
             allowNull: false,
         },
