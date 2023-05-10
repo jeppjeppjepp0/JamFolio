@@ -65,7 +65,8 @@ router.get('/musician/:id', async (req, res) => {
                     'name', 
                     'description',
                     'genre',
-                    'originalAuthor'
+                    'original_author',
+                    'songs_url'
                 ],
                 as: 'performed_songs'
             },
