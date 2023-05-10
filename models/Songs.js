@@ -24,6 +24,10 @@ Songs.init(
         },
         originalAuthor: {
             type: DataTypes.STRING(30),
+        },
+        songs_url: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     },
     {

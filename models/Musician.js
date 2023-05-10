@@ -40,6 +40,11 @@ Musician.init(
             type: DataTypes.TEXT,
             allowNull: false,
         },
+        profile_url: {
+            type: DataTypes.STRING,
+            allowNull: true
+        }
+        
     },
     {
         hooks: {

@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { Media, Musician } = require('../../models');
 const upload = require('../../config/cloudinary'); // Import the upload middleware
 
 router.post('/upload', upload.single('media'), async (req, res) => {
