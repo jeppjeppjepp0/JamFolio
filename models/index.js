@@ -5,12 +5,11 @@ const Gigs = require('./Gigs.js');
 const MusicianInstruments = require('./connectors/MusicianInstruments.js');
 const MusicianSongs = require('./connectors/MusicianSongs.js');
 
-
 Musician.hasMany(Gigs, {
     foreignKey: 'musician_id',
     onDelete: 'CASCADE'
 });
-  
+
 Gigs.belongsTo(Musician, {
     foreignKey: 'musician_id'
 });
@@ -20,7 +19,7 @@ Musician.belongsToMany(Instruments, {
         model: MusicianInstruments,
         unique: false,
     },
-    as: 'musician_instruments'
+    as: 'played_instruments' // Updated alias
 });
 
 Instruments.belongsToMany(Musician, {
@@ -28,7 +27,7 @@ Instruments.belongsToMany(Musician, {
         model: MusicianInstruments,
         unique: false,
     },
-    as: 'instruments_musician'
+    as: 'musicians' // Updated alias
 });
 
 Musician.belongsToMany(Songs, {
@@ -36,7 +35,7 @@ Musician.belongsToMany(Songs, {
         model: MusicianSongs,
         unique: false,
     },
-    as: 'musician_songs'
+    as: 'performed_songs' // Updated alias
 });
 
 Songs.belongsToMany(Musician, {
@@ -44,7 +43,7 @@ Songs.belongsToMany(Musician, {
         model: MusicianSongs,
         unique: false,
     },
-    as: 'songs_musician'
+    as: 'musicians' // Updated alias
 });
 
 module.exports = { Musician, 
