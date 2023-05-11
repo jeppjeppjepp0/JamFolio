@@ -54,9 +54,9 @@ router.post('/login', async (req, res) => {
     // Store musician data in session
     req.session.musician = {
       id: musician.id,
-      name: musician.name,
-      email: musician.email,
+      email: musician.email
     };
+    req.session.logged_in = true;
 
     res.status(200).json({ message: 'Login successful.' });
   } catch (err) {
