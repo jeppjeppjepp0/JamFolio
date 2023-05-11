@@ -33,7 +33,7 @@ header, .project:not(:last-child) {
 body {
   background-image: ("public/assets/caleb-george-pH88tHG-1yw-unsplash.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: stretch;
 }
 
 /* The actual timeline (the vertical ruler) */

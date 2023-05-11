@@ -82,6 +82,21 @@
 
       <!-- Instruments -->
       <div class="tab-pane" id="instruments" role="tabpanel" aria-labelledby="instruments-tab">
+        <div class="tab-pane active" id="instrument" role="tabpanel" aria-labelledby="instruments-tab">
+        <form id="add-instrument-form" enctype="multipart/form-data">
+        <h4 class="mb-3">Add an instrument</h4>
+
+          <div class="form-group">
+            <label for="instrument-name">Instrument Name</label>
+            <input type="text" class="form-control" id="instrument-name" placeholder="Instrument name" name="instrument_name" required>
+        </div>
+        <div class="form-group">
+            <label for="instrument-description">Description</label>
+            <input type="text" class="form-control" id="instrument-description" placeholder="Instrument description" name="instrument_description" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Add Instrument</button>
+        </form>
+
         <div class="row">
           {{#each played_instruments}}
           <div class="col-md-4">
@@ -95,6 +110,7 @@
           </div>
           {{/each}}
         </div>
+      </div>
       </div>
       {{!-- Gigs --}}
       <div class="tab-pane" id="gigs" role="tabpanel" aria-labelledby="gigs-tab">
