@@ -22,6 +22,14 @@ router.post('/signup', async (req, res) => {
 
     // Create new musician
     const newMusician = await Musician.create({ first_name, last_name, email, password, description });
+
+    // Store musician data in session
+    req.session.musician = {
+      id: newMusician.id,
+      email: newMusician.email
+    };
+    req.session.logged_in = true;
+
     return res.status(201).json(newMusician);
   } catch (error) {
     console.error(error);
