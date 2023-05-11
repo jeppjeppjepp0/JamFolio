@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Songs } = require('../../models');
+const { Songs, MusicianSongs } = require('../../models');
 const upload = require('../../config/cloudinary');
 
 router.post('/add-song', upload.single('song_file'), async (req, res) => {
@@ -12,6 +12,11 @@ router.post('/add-song', upload.single('song_file'), async (req, res) => {
       genre: genre,
       original_author: original_author,
       songs_url: songUrl,
+    });
+
+    const musicianSongs = await MusicianSongs.create({
+      musician_id: req.session.musician.id,
+      songs_id: newSong.id
     });
 
     res.status(200).json({
