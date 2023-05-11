@@ -35,6 +35,8 @@ Musician.belongsToMany(Songs, {
         model: MusicianSongs,
         unique: false,
     },
+    foreignKey: 'musician_id',
+    otherKey: 'songs_id',
     as: 'performed_songs' // Updated alias
 });
 
@@ -43,7 +45,9 @@ Songs.belongsToMany(Musician, {
         model: MusicianSongs,
         unique: false,
     },
-    as: 'musicians' // Updated alias
+    foreignKey: 'songs_id',
+    otherKey: 'musician_id',
+    as: 'performed_songs' // Updated alias
 
 });
 

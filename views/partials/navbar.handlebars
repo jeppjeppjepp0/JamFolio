@@ -24,7 +24,15 @@
         </li>
         {{/if}}
       </ul>
-     
+      <!-- Add search form -->
+      {{#if logged_in}}
+      <div class="ms-auto">
+        <form class="d-flex">
+          <input class="form-control form-control-sm me-2" type="search" placeholder="Search" aria-label="Search" style="max-width: 150px;">
+          <button class="btn btn-sm btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+      {{/if}}
     </div>
   </div>
 </nav>
