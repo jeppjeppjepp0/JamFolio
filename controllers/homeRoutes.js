@@ -78,10 +78,17 @@ router.get('/musician/:id', withAuth, async (req, res) => {
     });
 
     const musician = musicianData.get({ plain: true });
+    let is_user = false;
+    if (req.session.musician.id == req.params.id) {
+        is_user = true;
+    }
     res.render('profile', { 
+
         musician,
-        logged_in: req.session.logged_in,
-        is_user: false
+
+        logged_in: req.session.logged_in ,
+        is_user: is_user
+
     });
     } catch (err) {
         console.log(err);

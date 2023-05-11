@@ -27,6 +27,7 @@
     <div class="tab-content mt-4">
       <!-- Songs -->
       <div class="tab-pane active" id="songs" role="tabpanel" aria-labelledby="songs-tab">
+        {{#if is_user}}
         <form id="add-song-form" enctype="multipart/form-data">
         <h4 class="mb-3">Add a song</h4>
 
@@ -57,6 +58,7 @@
 
         <button type="submit" class="btn btn-primary mt-2">Add Song</button>
     </form>
+    {{/if}}
 
         <div class="row">
           {{#each performed_songs}}
@@ -82,6 +84,23 @@
 
       <!-- Instruments -->
       <div class="tab-pane" id="instruments" role="tabpanel" aria-labelledby="instruments-tab">
+        <div class="tab-pane active" id="instrument" role="tabpanel" aria-labelledby="instruments-tab">
+          {{#if is_user}}
+        <form id="add-instrument-form" enctype="multipart/form-data">
+        <h4 class="mb-3">Add an instrument</h4>
+
+          <div class="form-group">
+            <label for="instrument-name">Instrument Name</label>
+            <input type="text" class="form-control" id="instrument-name" placeholder="Instrument name" name="instrument_name" required>
+        </div>
+        <div class="form-group">
+            <label for="instrument-description">Description</label>
+            <input type="text" class="form-control" id="instrument-description" placeholder="Instrument description" name="instrument_description" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Add Instrument</button>
+        </form>
+        {{/if}}
+
         <div class="row">
           {{#each played_instruments}}
           <div class="col-md-4">
@@ -96,8 +115,47 @@
           {{/each}}
         </div>
       </div>
+      </div>
       {{!-- Gigs --}}
       <div class="tab-pane" id="gigs" role="tabpanel" aria-labelledby="gigs-tab">
+              <div class="tab-pane active" id="gigs" role="tabpanel" aria-labelledby="gigs-tab">
+        {{#if is_user}}
+        <form id="add-gig-form" enctype="multipart/form-data">
+        <h4 class="mb-3">Add a gig</h4>
+
+        <div class="form-group">
+            <label for="gig-name">Gig Name</label>
+            <input type="text" class="form-control" id="gig-name" placeholder="Gig name" name="gig_name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="location" placeholder="Location" name="location">
+        </div>
+
+        <div class="form-group">
+            <label for="gig-date">Date</label>
+            <input type="text" class="form-control" id="gig-date" placeholder="Date of gig" name="gig-date">
+        </div>
+
+        <div class="form-group">
+            <label for="gig-capacity">Capacity</label>
+            <input type="text" class="form-control" id="gig-capacity" placeholder="Capacity" name="gig-capacity">
+        </div>
+
+        <div class="form-group">
+            <label for="admission">Admission price</label>
+            <input type="text" class="form-control" id="admission" placeholder="Admission price" name="admission">
+        </div>
+
+        <div class="form-group">
+            <label for="gig-description">Description</label>
+            <input type="text" class="form-control" id="gig-description" placeholder="Description" name="gig-description">
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-2">Add Gig</button>
+    </form>
+    {{/if}}
         <div class="row">
           {{#each gigs}}
           <div class="col-md-4">

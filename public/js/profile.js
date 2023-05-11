@@ -79,3 +79,66 @@ const addSongFormHandler = async (event) => {
 document
   .querySelector('#add-song-form')
   .addEventListener('submit', addSongFormHandler);
+
+
+  const addInstrumentFormHandler = async (event) => {
+    event.preventDefault();
+  
+    const instrument_name = document.querySelector('#instrument-name').value.trim();
+    const instrument_description = document.querySelector('#instrument-description').value.trim();
+   
+    
+  
+    if (instrument_name && instrument_description) {
+     
+  
+      const response = await fetch('/api/instrument/add-instrument', {
+        method: 'POST',
+        body: JSON.stringify({ instrument_name, instrument_description }),
+        headers: { 'Content-Type': 'application/json'},
+      });
+  
+      if (response.ok) {
+        document.location.replace('/profile');
+      } else {
+        alert(response.statusText);
+      }
+    }
+  };
+  
+  document
+    .querySelector('#add-instrument-form')
+    .addEventListener('submit', addInstrumentFormHandler);
+
+
+  const addGigFormHandler = async (event) => {
+    event.preventDefault();
+  
+    const gig_name = document.querySelector('#gig-name').value.trim();
+    const location = document.querySelector('#location').value.trim();
+    const date = document.querySelector('#gig-date').value.trim();
+    const capacity = document.querySelector('#gig-capacity').value.trim();
+    const admission = document.querySelector('#admission').value.trim();
+    const gig_description = document.querySelector('#gig-description').value.trim();
+    
+  
+    if (gig_name && location && date && capacity && admission && gig_description) {
+     
+  
+      const response = await fetch('/api/gig/add-gig', {
+        method: 'POST',
+        body: JSON.stringify({ gig_name, location, date, capacity, admission, gig_description }),
+        headers: { 'Content-Type': 'application/json'},
+      });
+  
+      if (response.ok) {
+        document.location.replace('/profile');
+      } else {
+        alert(response.statusText);
+      }
+    }
+  };
+  
+  document
+    .querySelector('#add-gig-form')
+    .addEventListener('submit', addGigFormHandler);
