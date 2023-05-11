@@ -79,7 +79,7 @@ router.get('/musician/:id', async (req, res) => {
 
     const musician = musicianData.get({ plain: true });
     res.render('profile', { 
-        musician,
+        ...musician,
         logged_in: req.session.logged_in 
     });
     } catch (err) {
