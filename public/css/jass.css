@@ -1169,6 +1169,9 @@ form [type='radio'] {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  background-image: url('/assets/caleb-george-pH88tHG-1yw-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .container.container-fluid {
@@ -1702,4 +1705,36 @@ form [type='radio'] {
   .align-content-center-xl {
     align-content: center;
   }
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.login-card,
+.signup-card {
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 10px;
+}
+.img-fluid {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
