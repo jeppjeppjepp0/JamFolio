@@ -58,13 +58,13 @@
     <!-- Instruments -->
     <div class="tab-pane" id="instruments" role="tabpanel" aria-labelledby="instruments-tab">
         <div class="row">
-            {{#each instruments}}
+            {{#each played_instruments}}
             <div class="col-md-4">
                 <div class="card my-3">
                     <img src="{{this.instrument_image_url}}" class="card-img-top" alt="{{this.instrument_name}}">
                     <div class="card-body">
-                        <h5 class="card-title">{{this.instrument_name}}</h5>
-                        <p class="card-text">Details: {{this.instrument_details}}</p>
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <p class="card-text">Details: {{this.description}}</p>
                     </div>
                 </div>
             </div>
