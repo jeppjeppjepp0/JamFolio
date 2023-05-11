@@ -1128,8 +1128,8 @@ form select {
   -moz-appearance: none;
   background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
   background-repeat: no-repeat;
-  background-position-x: 98%;
-  background-position-y: 50%;
+  background-position-x: 100%;
+  background-position-y: 100%;
 }
 
 form label,
@@ -1165,17 +1165,17 @@ form [type='radio'] {
 }
 
 .container {
-  width: 85%;
+  width: 100%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   background-image: url('/assets/caleb-george-pH88tHG-1yw-unsplash.jpg');
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
 }
 
 .container.container-fluid {
-  width: 92%;
+  width: 100%;
 }
 
 /* FLEX CONTENT */
