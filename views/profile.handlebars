@@ -1,11 +1,27 @@
-<body>
-  <div class="container">
-    <!-- Header -->
-    <header class="text-center my-4">
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <form action="/upload" method="post" enctype="multipart/form-data" id="add-image-form">
+        <div class="form-group">
+            <label for="profile-image">Upload Porfile Picture</label>
+            <input type="file" class="form-control-file" id="profile-image" name="profile_image" accept="image/*">
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-2">Save</button>
+      </form>
+      <img src={{profile_url}} class="rounded-circle mx-auto d-block" alt="{{first_name}}" style="width: 80%; height: auto; padding: 10px;">
+    </div>
+    <div class="col-md-9">
       <h1>{{first_name}} {{last_name}}</h1>
       <p>{{email}}</p>
       <p>{{description}}</p>
-    </header>
+    </div>
+  </div>
+</div>
+
+
+
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" id="profileTabs" role="tablist">

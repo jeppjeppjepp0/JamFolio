@@ -1,30 +1,35 @@
 [
     {
-        "name": "Samantha Nguyen",
+        "first_name": "Samantha",
+        "last_name": "Nguyen",
         "email": "samantha.nguyen@gmail.com",
         "password": "thisIsMyPassword",
         "description": "I am a multi-instrumental musician that lives and works out of Denver, CO."
     },
     {
-        "name": "Jonathan Patel",
+        "first_name": "Jonathan",
+        "last_name": "Patel",
         "email": "jonathan.patel@yahoo.com",
         "password": "security",
         "description": "I am a multi-instrumental musician that lives and works out of Rio de Janeiro, Brazil."
     },
     {
-        "name": "Zoe Ramirez",
+        "first_name": "Zoe",
+        "last_name": "Ramirez",
         "email": "zoe.ramirez@hotmail.com",
         "password": "sunshine",
         "description": "I am an opera singer who lives and works out of Sydney, Australia."
     },
     {
-        "name": "Malik Thompson",
+        "first_name": "Malik",
+        "last_name": "Thompson",
         "email": "malik.thompson@outlook.com",
         "password": "1234567890",
         "description": "I am a multi-instrumental musician that lives and works out of Vancouver, Canada."
     },
     {
-        "name": "Olivia Hernandez",
+        "first_name": "Olivia",
+        "last_name": "Hernandez",
         "email": "olivia.hernandez@gmail.com",
         "password": "happyday",
         "description": "I am a multi-instrumental musician that lives and works out of Dubai, UAE."

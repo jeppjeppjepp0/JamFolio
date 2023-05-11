@@ -142,3 +142,31 @@ document
   document
     .querySelector('#add-gig-form')
     .addEventListener('submit', addGigFormHandler);
+
+  
+  
+const addImageFormHandler = async (event) => {
+  event.preventDefault();
+
+  const profile_image = document.querySelector('#profile-image').files[0];
+
+  if (profile_image) {
+    const formData = new FormData();
+    formData.append('profile_image', profile_image);
+
+    const response = await fetch('/api/musician/upload-profile-image', {
+      method: 'PUT',
+      body: formData,
+    });
+
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert(response.statusText);
+    }
+  }
+};
+
+document
+  .querySelector('#add-image-form')
+  .addEventListener('submit', addImageFormHandler);

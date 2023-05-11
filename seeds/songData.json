@@ -3,42 +3,49 @@
         "name": "Nessun Dorma",
         "description": "This iconic aria is sung by Calaf, a prince who falls in love with the icy Princess Turandot. The song's title translates to 'None Shall Sleep' and describes Calaf's determination to win Turandot's hand, even if it means risking his life in a deadly challenge. The soaring melody and triumphant ending have made 'Nessun Dorma' one of the most recognizable and beloved opera songs of all time.",
         "genre": "Opera",
-        "originalAuthor": "Giacomo Puccini"
+        "originalAuthor": "Giacomo Puccini",
+        "songs_url": "https://res.cloudinary.com/dpil3zvj3/video/upload/v1683786180/jamfolio/nqmg7wfdruyexu7itjaw.wav"
     },
     {
         "name": "La donna è mobile",
         "description": "his lively aria is sung by the Duke of Mantua, a charming and philandering nobleman who uses his power and influence to seduce women. The title translates to 'Woman is Fickle' and describes the Duke's view of women as fickle and unreliable. The catchy melody and upbeat tempo of 'La donna è mobile' have made it a popular tune outside of the opera world, and it is often used in commercials and other media.",
         "genre": "Opera",
-        "originalAuthor": "Giuseppe Verdi"
+        "originalAuthor": "Giuseppe Verdi",
+        "songs_url": "https://res.cloudinary.com/dpil3zvj3/video/upload/v1683786180/jamfolio/nqmg7wfdruyexu7itjaw.wav"
     },
     {
         "name": "Take the A Train",
         "description": "This classic jazz tune was written by Duke Ellington's longtime collaborator, Billy Strayhorn. It was originally composed as a tribute to the New York City subway system and the A train, which ran from Harlem to Brooklyn. The swinging melody and catchy rhythm of 'Take the A Train' have made it a beloved jazz standard, and it has been covered by numerous artists over the years.",
         "genre": "Jazz",
-        "originalAuthor": "Duke Ellington"
+        "originalAuthor": "Duke Ellington",
+        "songs_url": "https://res.cloudinary.com/dpil3zvj3/video/upload/v1683786180/jamfolio/nqmg7wfdruyexu7itjaw.wav"
     },
     {
         "name": "Summertime",
         "description": "This haunting ballad is one of the most famous songs from the opera Porgy and Bess. It is sung by the character Clara as a lullaby to her baby, and its dreamy melody and evocative lyrics have made it a popular jazz standard as well. 'Summertime' has been covered by countless jazz and pop artists, and its timeless quality continues to captivate audiences today.",
         "genre": "Jazz",
-        "originalAuthor": "George Gershwin"
+        "originalAuthor": "George Gershwin",
+        "songs_url": "https://res.cloudinary.com/dpil3zvj3/video/upload/v1683786180/jamfolio/nqmg7wfdruyexu7itjaw.wav"
     },
     {
         "name": "Shape of You",
         "description": "This smash hit pop song by Ed Sheeran was released in 2017 and became one of the best-selling singles of all time. The song's infectious beat and catchy lyrics about falling in love quickly made it a favorite on the radio and in clubs around the world.",
         "genre": "Pop",
-        "originalAuthor": "Ed Sheeran"
+        "originalAuthor": "Ed Sheeran",
+        "songs_url": "https://res.cloudinary.com/dpil3zvj3/video/upload/v1683786180/jamfolio/nqmg7wfdruyexu7itjaw.wav"
     },
     {
         "name": "The Times They Are A-Changin",
         "description": "This iconic folk song was written and performed by Bob Dylan in 1964 and quickly became an anthem for the civil rights movement and other social and political causes. The song's powerful lyrics and simple guitar accompaniment capture the spirit of change and upheaval that characterized the 1960s.",
         "genre": "Folk",
-        "originalAuthor": "Bob Dylan"
+        "originalAuthor": "Bob Dylan",
+        "songs_url": "https://res.cloudinary.com/dpil3zvj3/video/upload/v1683786180/jamfolio/nqmg7wfdruyexu7itjaw.wav"
     },
     {
         "name": "Stairway to Heaven",
         "description": "This classic rock song by Led Zeppelin is widely regarded as one of the greatest and most influential rock songs of all time. It was released in 1971 and features a slow, building intro that gradually gives way to a thunderous guitar riff and soaring vocals.",
         "genre": "Rock",
-        "originalAuthor": "Led Zeppelin"
+        "originalAuthor": "Led Zeppelin",
+        "songs_url": "https://res.cloudinary.com/dpil3zvj3/video/upload/v1683786180/jamfolio/nqmg7wfdruyexu7itjaw.wav"
     }
 ]
