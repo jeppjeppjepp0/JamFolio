@@ -31,9 +31,9 @@ header, .project:not(:last-child) {
 
 /* Set a background color */
 body {
-  background-image: ("public/assets/caleb-george-pH88tHG-1yw-unsplash.jpg");
+  background-image:("public/assets/caleb-george-pH88tHG-1yw-unsplash.jpg");
   background-repeat: no-repeat;
-  background-size: stretch;
+  background-size: cover;
 }
 
 /* The actual timeline (the vertical ruler) */
