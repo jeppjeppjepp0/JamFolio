@@ -1,42 +1,42 @@
 [
     {
         "musician_id": 1,
-        "song_id": 3
+        "songs_id": 3
     },
     {
         "musician_id": 1,
-        "song_id": 4
+        "songs_id": 4
     },
     {
         "musician_id": 2,
-        "song_id": 5
+        "songs_id": 5
     },
     {
         "musician_id": 3,
-        "song_id": 1
+        "songs_id": 1
     },
     {
         "musician_id": 3,
-        "song_id": 2
+        "songs_id": 2
     },
     {
         "musician_id": 4,
-        "song_id": 6
+        "songs_id": 6
     },
     {
         "musician_id": 4,
-        "song_id": 1
+        "songs_id": 1
     },
     {
         "musician_id": 5,
-        "song_id": 3
+        "songs_id": 3
     },
     {
         "musician_id": 5,
-        "song_id": 6
+        "songs_id": 6
     },
     {
         "musician_id": 5,
-        "song_id": 7
+        "songs_id": 7
     }
 ]
