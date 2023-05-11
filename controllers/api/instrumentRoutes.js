@@ -90,8 +90,8 @@ router.post('/add-instrument', async (req, res) => {
   
       // Create new instrument
       const newInstrument = await Instruments.create({
-        name,
-        description,
+        name: instrument_name,
+        description: instrument_description,
         
       });
   
