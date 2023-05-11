@@ -79,8 +79,10 @@ router.get('/musician/:id', withAuth, async (req, res) => {
 
     const musician = musicianData.get({ plain: true });
     res.render('profile', { 
-        ...musician,
-        logged_in: req.session.logged_in 
+
+        musician,
+        logged_in: req.session.logged_in ,
+        is_user: false
     });
     } catch (err) {
         console.log(err);
@@ -136,7 +138,8 @@ router.get('/profile', withAuth, async (req, res) => {
         console.log(user);
         res.render('profile', {
             ...user,
-            logged_in: true
+            logged_in: req.session.logged_in,
+            is_user: true
         });
     } catch (err) {
       res.status(500).json(err);
