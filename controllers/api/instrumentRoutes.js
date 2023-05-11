@@ -78,6 +78,29 @@ router.get('/:id/instruments', async (req, res) => {
     }
 });
 
+// API endpoint to add instruments
+router.post('/add-instrument', async (req, res) => {
+    try {
+      const { instrument_name, instrument_description } = req.body;
+  
+      // Check if all required fields are provided
+      if (!instrument_name || !instrument_description ) {
+        return res.status(400).json({ error: 'name and description are required.' });
+      }
+  
+      // Create new instrument
+      const newInstrument = await Instruments.create({
+        name,
+        description,
+        
+      });
+  
+      return res.status(201).json(newInstrument);
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ error: 'Failed to add instrument.' });
+    }
+  });
 
 
 module.exports = router;
