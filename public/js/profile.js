@@ -93,17 +93,12 @@ document
     
   
     if (gig_name && location && date && capacity && admission && gig_description) {
-      const gigformData = new FormData();
-      gigformData.append('name', gig_name);
-      gigformData.append('location', location);
-      gigformData.append('date', date);
-      gigformData.append('capacity', capacity);
-      gigformData.append('admission', admission);
-      gigformData.append('description', gig_description);
+     
   
       const response = await fetch('/api/gig/add-gig', {
         method: 'POST',
-        body: gigformData,
+        body: JSON.stringify({ gig_name, location, date, capacity, admission, gig_description }),
+        headers: { 'Content-Type': 'application/json'},
       });
   
       if (response.ok) {
