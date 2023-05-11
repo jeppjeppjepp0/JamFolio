@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Musician, Gigs, Instruments,  Songs, Media } = require('../models');
+const { Musician, Gigs, Instruments,  Songs, MusicianSongs } = require('../models');
 const withAuth = require('../utils/auth');
 
 // homepage
@@ -65,21 +65,21 @@ router.get('/musician/:id', withAuth, async (req, res) => {
                     'name', 
                     'description',
                     'genre',
-                    'originalAuthor'
+                    'original_author',
+                    'songs_url'
                 ],
-                as: 'performed_songs'
-            },
-            {
-                model: Media,
-                attributes: [
-                    'media_url'
-                ],
+                as: 'performed_songs',
+                through: {
+                    attributes: [],
+                    model: MusicianSongs
+                }
             }
         ],
     });
 
     const musician = musicianData.get({ plain: true });
     res.render('profile', { 
+
         musician,
         logged_in: req.session.logged_in ,
         is_user: false
@@ -94,7 +94,7 @@ router.get('/musician/:id', withAuth, async (req, res) => {
 router.get('/profile', withAuth, async (req, res) => {
     try {
         // Find the logged in user based on the session ID
-        const musicianData = await Musician.findByPk(req.session.user_id, {
+        const musicianData = await Musician.findByPk(req.session.musician.id, {
             attributes: { exclude: ['password'] },
             include: [
                 {
@@ -122,21 +122,20 @@ router.get('/profile', withAuth, async (req, res) => {
                         'name', 
                         'description',
                         'genre',
-                        'originalAuthor'
+                        'original_author',
+                        'songs_url'
                     ],
-                    as: 'performed_songs'
-                },
-                {
-                    model: Media,
-                    attributes: [
-                        'media_url'
-                    ],
+                    as: 'performed_songs',
+                    through: {
+                        attributes: [],
+                        model: MusicianSongs
+                    }
                 }
             ],
         });
   
         const user = musicianData.get({ plain: true });
-    
+        console.log(user);
         res.render('profile', {
             ...user,
             logged_in: req.session.logged_in,

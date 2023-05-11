@@ -1,76 +1,121 @@
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="text-center my-4">
+      <h1>{{first_name}} {{last_name}}</h1>
+      <p>{{email}}</p>
+      <p>{{description}}</p>
+    </header>
 
-<div class="container text-center">
-    <div class="row align-items-start">
-        <div class="col-md-4">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="profileTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="songs-tab" data-bs-toggle="tab" href="#songs" role="tab" aria-controls="songs"
+          aria-selected="true">Songs</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="instruments-tab" data-bs-toggle="tab" href="#instruments" role="tab"
+          aria-controls="instruments" aria-selected="false">Instruments</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="gigs-tab" data-bs-toggle="tab" href="#gigs" role="tab" aria-controls="gigs"
+          aria-selected="false">Gigs</a>
+      </li>
+    </ul>
 
-<div class="mb-3">
-<label for="exampleFormControlTextarea1" class="form-label">Discography</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div>
-<div class="mb-3"></div>
-  <label for="formFile" class="form-label">Upload your file here</label>
-  <input class="form-control" type="file" id="formFile1">
-</div>
+    <!-- Tab panes -->
+    <div class="tab-content mt-4">
+      <!-- Songs -->
+      <div class="tab-pane active" id="songs" role="tabpanel" aria-labelledby="songs-tab">
+        <form id="add-song-form" enctype="multipart/form-data">
+        <h4 class="mb-3">Add a song</h4>
 
-<div class="mb-3"></div>
-    <label for="exampleFormControlTextarea1" class="form-label">Discography</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div>
-<div class="mb-3"></div>
-    <label for="formFile" class="form-label">Upload your file here</label>
-    <input class="form-control" type="file" id="formFile2">
-</div>
-
-<div class="mb-3"></div>
-    <label for="exampleFormControlTextarea1" class="form-label">Discography</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div>
-<div class="mb-3"></div>
-  <label for="formFile" class="form-label">Upload your file here</label>
-  <input class="form-control" type="file" id="formFile3">
-</div>
-</div>
-
-<div class="col-md-4">
-<!--second column photo of musician-->
-{{!-- <div class="mb-3"></div>
-<img src="..." class="rounded mx-auto d-block" alt="musician photo"> --}}
-<div class="mb-3"></div>
-  <label for="formFile" class="form-label">Upload your photo here</label>
-  <input class="form-control" type="file" id="formFile">
-</div>
-</div>
-{{!-- </div> --}}
-{{#if gigs.length}}
-<div class="col-md-4">
-       <!--third column : Upcoming gigs in Timeline-->
-
-       {{#each gig as |gig|}}
-    <div class="timeline">
-  <div class="container right">
-    <div class="content">
-      <h2 id="gig-date1">{{gig.date}}</h2>
-      <p id="gig-place1">{{gig.place}}</p>
-      <p id="gig-capacity1">{{gig.capacity}}</p>
-      <p id="gig-price1">{{gig.[0].price}}</p>
-      {{/each}}
-    </div>
-    {{/if}}
-  </div>
-
-</div>
- 
-</div>
-
-
+        <div class="form-group">
+            <label for="song-name">Song Name</label>
+            <input type="text" class="form-control" id="song-name" placeholder="Song name" name="song_name" required>
         </div>
+
+        <div class="form-group">
+            <label for="genre">Genre</label>
+            <input type="text" class="form-control" id="genre" placeholder="Genre" name="genre">
+        </div>
+
+        <div class="form-group">
+            <label for="song-description">Song Description</label>
+            <input type="text" class="form-control" id="song-description" placeholder="Song description" name="song_description">
+        </div>
+
+        <div class="form-group">
+            <label for="original-author">Original Author</label>
+            <input type="text" class="form-control" id="original-author" placeholder="Original author" name="original_author">
+        </div>
+
+        <div class="form-group">
+            <label for="song-file">Upload Song</label>
+            <input type="file" class="form-control-file" id="song-file" name="song_file" accept="audio/*">
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-2">Add Song</button>
+    </form>
+
+        <div class="row">
+          {{#each performed_songs}}
+          <div class="col-md-4">
+            <div class="card my-3">
+              <audio controls>
+                <source src="{{this.songs_url}}" type="audio/wav">
+                <source src="{{this.songs_url}}" type="audio/mp3">
+                Your browser does not support the audio element
+              </audio>
+
+              <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>
+                <p class="card-text">Genre: {{this.genre}}</p>
+                <p class="card-text">Description: {{this.description}}</p>
+                <p class="card-text">Original Author: {{this.original_author}}</p>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <!-- Instruments -->
+      <div class="tab-pane" id="instruments" role="tabpanel" aria-labelledby="instruments-tab">
+        <div class="row">
+          {{#each played_instruments}}
+          <div class="col-md-4">
+            <div class="card my-3">
+              <img src="{{this.instrument_image_url}}" class="card-img-top" alt="{{this.instrument_name}}">
+              <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>
+                <p class="card-text">Details: {{this.description}}</p>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      {{!-- Gigs --}}
+      <div class="tab-pane" id="gigs" role="tabpanel" aria-labelledby="gigs-tab">
+        <div class="row">
+          {{#each gigs}}
+          <div class="col-md-4">
+            <div class="card my-3">
+
+              <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>
+                <p class="card-text">Details: {{this.description}}</p>
+                <p class="card-text">Location: {{this.location}}</p>
+                <p class="card-text">Date: {{this.date}}</p>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+</body>
+
+<script src="/js/profile.js"></script>

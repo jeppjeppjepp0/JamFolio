@@ -2,7 +2,6 @@ const Musician = require('./Musician.js');
 const Instruments = require('./Instruments.js');
 const Songs = require('./Songs.js');
 const Gigs = require('./Gigs.js');
-const Media = require('./Media.js');
 const MusicianInstruments = require('./connectors/MusicianInstruments.js');
 const MusicianSongs = require('./connectors/MusicianSongs.js');
 
@@ -36,6 +35,8 @@ Musician.belongsToMany(Songs, {
         model: MusicianSongs,
         unique: false,
     },
+    foreignKey: 'musician_id',
+    otherKey: 'songs_id',
     as: 'performed_songs' // Updated alias
 });
 
@@ -44,18 +45,10 @@ Songs.belongsToMany(Musician, {
         model: MusicianSongs,
         unique: false,
     },
-    as: 'musicians' // Updated alias
+    foreignKey: 'songs_id',
+    otherKey: 'musician_id',
+    as: 'performed_songs' // Updated alias
 
-});
-
-// Add this association after the existing associations
-Musician.hasMany(Media, {
-    foreignKey: 'musician_id',
-    onDelete: 'CASCADE'
-});
-  
-Media.belongsTo(Musician, {
-    foreignKey: 'musician_id'
 });
 
 module.exports = { Musician, 
@@ -63,6 +56,5 @@ module.exports = { Musician,
                    Songs,
                    Gigs,
                    MusicianInstruments,
-                   MusicianSongs,
-                   Media
+                   MusicianSongs
                 };

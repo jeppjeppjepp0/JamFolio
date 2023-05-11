@@ -22,8 +22,12 @@ Songs.init(
         genre: {
             type: DataTypes.STRING(30),
         },
-        originalAuthor: {
+        original_author: {
             type: DataTypes.STRING(30),
+        },
+        songs_url: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     },
     {

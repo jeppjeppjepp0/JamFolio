@@ -1,130 +1,14 @@
-<div class="container text-center">
-  <div class="row">
-    <div class="col">
-      <aside class="profile-card" id="musician-card1">
-  
-  <header>
-    
-    <!-- photo -->
-    <a href="#">
-      <img src="public/assets/Screenshot 2023-05-08 at 12.19.14 PM.png">
-    </a>
-
-    <!-- the username -->
-    <h1 id="musician-name">Jedd Javier</h1>
-    
-    <!-- and role or location -->
-    <h2 id="tagline">Guitarist # 1!</h2>
-    
-  </header>
-  
-  <!-- bit of a bio; who are you? -->
-  <div class="profile-bio">
-    
-    <p>Classical guitarist</p>
-    
-  </div>
-  
-
-  
-</aside>
+<div class="row">
+  {{#each musicians}}
+  <div class="col-md-4">
+    <div class="card my-3">
+      <img src="https://res.cloudinary.com/dpil3zvj3/image/upload/v1683738842/jamfolio/xh8eiocwv1tzbci8ql0l.jpg" class="card-img-top rounded-circle mx-auto d-block" alt="{{this.first_name}}" style="width: 50%; height: auto; padding: 10px;">
+      <div class="card-body">
+        <h5 class="card-title"><a href="/musician/{{this.id}}">{{this.first_name}} {{this.last_name}}</a></h5>
+        <p class="card-text">Description: {{this.description}}</p>
+      </div>
     </div>
-
-
-    <div class="col">
-            <aside class="profile-card" id="musician-card2">
-  
-  <header>
-    
-    <!-- photo -->
-    <a href="#">
-      <img src="public/assets/Screenshot 2023-05-08 at 12.19.14 PM.png">
-    </a>
-
-    <!-- the username -->
-    <h1 id="musician-name">PINK FLOYD</h1>
-    
-    <!-- and role or location -->
-    <h2 id="tagline">Guitarist # 2!</h2>
-    
-  </header>
-  
-  <!-- bit of a bio; who are you? -->
-  <div class="profile-bio">
-    
-    <p>electric guitarist</p>
-    
   </div>
-  
-
-  
-</aside>
-    </div>
-<!-- musician 3 card-->
-
-    <div class="col">
-            <aside class="profile-card" id="musician-card3">
-  
-  <header>
-    
-    <!-- photo -->
-    <a href="#">
-      <img src="public/assets/Screenshot 2023-05-08 at 12.19.14 PM.png">
-    </a>
-
-    <!-- the username -->
-    <h1 id="musician-name">Santana</h1>
-    
-    <!-- and role or location -->
-    <h2 id="tagline">Guitarist # 3!</h2>
-    
-  </header>
-  
-  <!-- bit of a bio; who are you? -->
-  <div class="profile-bio">
-    
-    <p>electric guitarist</p>
-    
-  </div>
-  
-
-  
-</aside>
-    </div>
-
-
-    <div class="col">      
-      <aside class="profile-card" id="musician-card4">
-  
-  <header>
-    
-    <!-- photo -->
-    <a href="#">
-      <img src="public/assets/Screenshot 2023-05-08 at 12.19.14 PM.png">
-    </a>
-
-    <!-- the username -->
-    <h1 id="musician-name">Jimi Hendrix</h1>
-    
-    <!-- and role or location -->
-    <h2 id="tagline">Guitarist # 0!</h2>
-    
-  </header>
-  
-  <!-- bit of a bio; who are you? -->
-  <div class="profile-bio">
-    
-    <p>electric guitarist</p>
-    
-  </div>
-  
-
-  
-</aside></div>
-  </div>
-  <div class="row">
-    <div class="col-8">col-8</div>
-    <div class="col-4">col-4</div>
-  </div>
+  {{/each}}
 </div>
-
+</div>

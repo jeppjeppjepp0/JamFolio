@@ -2,6 +2,7 @@
 const router = require('express').Router();
 const { Musician } = require('../../models');
 const bcrypt = require('bcrypt');
+const upload = require('../../config/cloudinary')
 
 // Signup route
 router.post('/signup', async (req, res) => {
@@ -21,6 +22,14 @@ router.post('/signup', async (req, res) => {
 
     // Create new musician
     const newMusician = await Musician.create({ first_name, last_name, email, password, description });
+
+    // Store musician data in session
+    req.session.musician = {
+      id: newMusician.id,
+      email: newMusician.email
+    };
+    req.session.logged_in = true;
+
     return res.status(201).json(newMusician);
   } catch (error) {
     console.error(error);
@@ -53,9 +62,9 @@ router.post('/login', async (req, res) => {
     // Store musician data in session
     req.session.musician = {
       id: musician.id,
-      name: musician.name,
-      email: musician.email,
+      email: musician.email
     };
+    req.session.logged_in = true;
 
     res.status(200).json({ message: 'Login successful.' });
   } catch (err) {
@@ -68,6 +77,35 @@ router.post('/login', async (req, res) => {
 router.post('/logout', async (req, res) => {
   req.session.destroy();
   res.status(200).json({ message: 'Session cleared.' });
+});
+
+// Add profile URL for musician
+router.put('/upload-profile-image/:id', upload.single('profile_image'), async (req, res) => {
+  try {
+    const musicianId = req.params.id;
+    const musician = await Musician.findByPk(musicianId);
+
+    if (!musician) {
+      return res.status(404).json({ message: 'Musician not found' });
+    }
+
+    const profileImageUrl = req.file.path;
+
+    const updatedMusician = await Musician.update(
+      { profile_url: profileImageUrl },
+      { where: { id: musicianId } }
+    );
+
+    res.status(200).json({
+      message: 'Profile image uploaded successfully',
+      profile_url: profileImageUrl,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      message: 'Something went wrong',
+    });
+  }
 });
 
 
