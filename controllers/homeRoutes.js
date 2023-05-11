@@ -36,7 +36,7 @@ router.get('/', async (req, res) => {
 });
 
 // specific user
-router.get('/musician/:id', async (req, res) => {
+router.get('/musician/:id', withAuth, async (req, res) => {
   try {
     const musicianData = await Musician.findByPk(req.params.id, {
         include: [
