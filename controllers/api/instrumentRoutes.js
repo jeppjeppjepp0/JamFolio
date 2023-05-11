@@ -94,6 +94,10 @@ router.post('/add-instrument', async (req, res) => {
         description: instrument_description,
         
       });
+      const musicianInstruments = await MusicianInstruments.create({
+        musician_id: req.session.musician.id,
+        instrument_id: newInstrument.id
+      });
   
       return res.status(201).json(newInstrument);
     } catch (error) {
