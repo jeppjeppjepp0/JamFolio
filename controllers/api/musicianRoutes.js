@@ -80,9 +80,9 @@ router.post('/logout', async (req, res) => {
 });
 
 // Add profile URL for musician
-router.put('/upload-profile-image/:id', upload.single('profile_image'), async (req, res) => {
+router.put('/upload-profile-image', upload.single('profile_image'), async (req, res) => {
   try {
-    const musicianId = req.params.id;
+    const musicianId = req.session.musician.id;
     const musician = await Musician.findByPk(musicianId);
 
     if (!musician) {
