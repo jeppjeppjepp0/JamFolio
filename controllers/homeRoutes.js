@@ -85,8 +85,10 @@ router.get('/musician/:id', withAuth, async (req, res) => {
     res.render('profile', { 
 
         musician,
+
         logged_in: req.session.logged_in ,
         is_user: is_user
+
     });
     } catch (err) {
         console.log(err);
