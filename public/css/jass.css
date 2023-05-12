@@ -1201,12 +1201,37 @@ color: white;
 }
 
 /* Navbar Styles */
+
+.navbar {
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
 .navbar-brand {
-  background-color: rgb(78, 75, 75); /* Change the background color */
-  color: white; /* Change the text color */
+  background-color: rgb(180, 173, 173); /* Change the background color */
+  color: fff; /* Change the text color */
+  font-size: 30px;
+  font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif; /* Change the font family */
 }
 
+.nav-item .nav-link {
+  color: #1a1515; /* White text color */
+}
+
+.nav-item .nav-link.active {
+  color: #421027; /* Highlight the active link with a different color */
+}
+
+.form-control {
+  border-radius: 30px; /* Rounded borders for the search input */
+  border: none; /* Remove the default border */
+  padding: 5px 15px; /* Add some padding */
+}
+
+.btn-outline-success {
+  border-color: #0f0f0f; /* Use the same color as the active link for the button border */
+  color: #2c2c2a; /* And for the button text */
+}
 
 
 /* FLEX CONTENT */
