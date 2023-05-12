@@ -4,34 +4,71 @@
         "last_name": "Nguyen",
         "email": "samantha.nguyen@gmail.com",
         "password": "thisIsMyPassword",
-        "description": "I am a multi-instrumental musician that lives and works out of Denver, CO."
+        "description": "I am a multi-instrumental musician that lives and works out of Denver, CO.",
+        "profile_url": "https://res.cloudinary.com/dpil3zvj3/image/upload/v1683854657/jamfolio/exfpaesxjpvgrrd57jmh.webp"
     },
     {
         "first_name": "Jonathan",
         "last_name": "Patel",
         "email": "jonathan.patel@yahoo.com",
         "password": "security",
-        "description": "I am a multi-instrumental musician that lives and works out of Rio de Janeiro, Brazil."
+        "description": "I am a multi-instrumental musician that lives and works out of Rio de Janeiro, Brazil.",
+        "profile_url": "https://res.cloudinary.com/dpil3zvj3/image/upload/v1683854689/jamfolio/hli4n6z56fvxsgmyvdxo.jpg"
     },
     {
         "first_name": "Zoe",
         "last_name": "Ramirez",
         "email": "zoe.ramirez@hotmail.com",
         "password": "sunshine",
-        "description": "I am an opera singer who lives and works out of Sydney, Australia."
+        "description": "I am an opera singer who lives and works out of Sydney, Australia.",
+        "profile_url": "https://res.cloudinary.com/dpil3zvj3/image/upload/v1683854744/jamfolio/tiwnkkyvbqxrhegve9jr.jpg"
     },
     {
         "first_name": "Malik",
         "last_name": "Thompson",
         "email": "malik.thompson@outlook.com",
         "password": "1234567890",
-        "description": "I am a multi-instrumental musician that lives and works out of Vancouver, Canada."
+        "description": "I am a multi-instrumental musician that lives and works out of Vancouver, Canada.",
+        "profile_url": "https://res.cloudinary.com/dpil3zvj3/image/upload/v1683854769/jamfolio/sp4c9qsra90zaqixddum.webp"
     },
     {
         "first_name": "Olivia",
         "last_name": "Hernandez",
         "email": "olivia.hernandez@gmail.com",
         "password": "happyday",
-        "description": "I am a multi-instrumental musician that lives and works out of Dubai, UAE."
+        "description": "I am a multi-instrumental musician that lives and works out of Dubai, UAE.",
+        "profile_url": "https://res.cloudinary.com/dpil3zvj3/image/upload/v1683854796/jamfolio/usrr4zlnsklae5saootb.jpg"
+    },
+    {
+        "first_name": "Jacob",
+        "last_name": "Smith",
+        "email": "jacob.smith@gmail.com",
+        "password": "lovemusic",
+        "description": "A passionate guitarist and singer-songwriter based in London, UK.",
+        "profile_url": "https://res.cloudinary.com/dpil3zvj3/image/upload/v1683854826/jamfolio/mdnbbd7d3ibco8nofhce.webp"
+    },
+    {
+        "first_name": "Sophia",
+        "last_name": "Johnson",
+        "email": "sophia.johnson@gmail.com",
+        "password": "soundsoul",
+        "description": "A classically trained violinist and pianist from New York, USA.",
+        "profile_url": "https://res.cloudinary.com/dpil3zvj3/image/upload/v1683854883/jamfolio/ks5uzbjh8brz29vlu7ux.jpg"
+    },
+    {
+        "first_name": "Liam",
+        "last_name": "Williams",
+        "email": "liam.williams@gmail.com",
+        "password": "melodymaker",
+        "description": "An electronic music producer and DJ from Berlin, Germany.",
+        "profile_url": "https://res.cloudinary.com/dpil3zvj3/image/upload/v1683854990/jamfolio/ztxwm90r5lfeqye3xzbq.jpg"
+    },
+    {
+        "first_name": "John",
+        "last_name": "Wick",
+        "email": "john.wick@gmail.com",
+        "password": "jhonwick",
+        "description": "An electronic music producer and DJ from Berlin, Germany.",
+        "profile_url": "https://res.cloudinary.com/dpil3zvj3/image/upload/v1683854920/jamfolio/vwobqwotztatvkmzcyqv.webp"
     }
 ]
