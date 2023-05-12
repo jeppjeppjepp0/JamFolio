@@ -1,11 +1,11 @@
 # JamFolio
 A gif of how the deployed application looks:
 
-![](public/assets/deployedjamfolio.gif)
+![Deployed Image](public/assets/deployedjamfolio.gif)
 
 ## Technology Used 
 
-| Technology Used         | Resource URL           | 
+| `Technology Used`         | `Resource URL`           | 
 | ------------- |:-------------:| 
 | JavaScript | [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)|   
 | Git | [https://git-scm.com/](https://git-scm.com/) |
@@ -20,6 +20,8 @@ A gif of how the deployed application looks:
 <hr>
 
 ## Description 
+
+ Deployed Link: [https://jamfolio.herokuapp.com/](https://jamfolio.herokuapp.com/)
 
  JamFolio is an application that allows musicians to connect to employers, venues, fans, and other musicians by listing their discography and experience.
 
@@ -128,11 +130,26 @@ router.post('/signup', async (req, res) => {
 
 <hr>
 
+## Usage
+
+Our application implements the following User Story:
+ `Story`        | `Description`          | 
+| ------------- |:-------------:| 
+| User Story 1 | User (musician) can sign up for their account |
+| User Story 2 | User can log in to their account |
+| User Story 3| User can upload their media files (photos/audio) |
+| User Story 4| User can advertise themselves by adding details about themselves |
+| User Story 5 | User can search for other musicians in the search bar which returns relevant users by search terms|
+
+Each of these features (except for the search functionality) were implemented through our `Sprint` this past week. A user can successfully sign up, log in, upload media files, and has a shareable profile page that contains relevant information to their music.
+
+<hr>
+
 ## Learning Points 
 
 Below are the following topics/methods that we learned through this project:
 
-| Topic         | Resource URL           | 
+| `Topic`         | `Resource URL`| 
 | ------------- |:-------------:| 
 | Sequelize | [https://sequelize.org/](https://sequelize.org/) |
 | bcrypt | [https://www.npmjs.com/package/bcrypt](https://www.npmjs.com/package/bcrypt) |
