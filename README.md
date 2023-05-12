@@ -1,4 +1,7 @@
 # JamFolio
+A gif of how the deployed application looks:
+
+![](public/assets/deployedjamfolio.gif)
 
 ## Technology Used 
 
