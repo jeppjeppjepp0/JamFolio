@@ -4,22 +4,22 @@ const { Gigs } = require('../../models');
 
 router.post('/add-gig', async (req, res) => {
     try {
-      const { name, location, date, capacity, admission, description, musician_id } = req.body;
+      const { gig_name, location, date, capacity, admission, gig_description } = req.body;
   
       // Check if all required fields are provided
-      if (!name || !location || !date || !admission || !description || !musician_id) {
+      if (!gig_name || !location || !date || !admission || !gig_description) {
         return res.status(400).json({ error: 'name, location, date, admission, description, and musician_id are required.' });
       }
   
       // Create new gig
       const newGig = await Gigs.create({
-        name,
-        location,
-        date,
-        capacity,
-        admission,
-        description,
-        musician_id,
+        name: gig_name,
+        location: location,
+        date: date,
+        capacity: capacity,
+        admission: admission,
+        description: gig_description
+        // musician_id: musician_id,
       });
   
       return res.status(201).json(newGig);
