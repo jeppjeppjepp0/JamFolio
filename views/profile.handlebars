@@ -1,26 +1,37 @@
-
-<div class="container">
+<div class="container-fluid py-5">
   <div class="row">
-    <div class="col-md-3">
-      <form action="/upload" method="post" enctype="multipart/form-data" id="add-image-form">
-        <div class="form-group">
-            <label for="profile-image">Upload Porfile Picture</label>
-            <input type="file" class="form-control-file" id="profile-image" name="profile_image" accept="image/*">
-        </div>
-
-        <button type="submit" class="btn btn-primary mt-2">Save</button>
-      </form>
-      <img src={{profile_url}} class="rounded-circle mx-auto d-block" alt="{{first_name}}" style="width: 80%; height: auto; padding: 10px;">
-    </div>
+    <!-- Profile Info Section -->
     <div class="col-md-9">
-      <h1>{{first_name}} {{last_name}}</h1>
-      <p>{{email}}</p>
-      <p>{{description}}</p>
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title">{{first_name}} {{last_name}}</h1>
+          <p class="card-text">
+            <strong>Email: </strong>{{email}}<br>
+            <strong>Description: </strong>{{description}}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Upload Section -->
+    <div class="col-md-3">
+      <div class="card">
+        <img src={{profile_url}} class="card-img-top rounded-circle mx-auto d-block" alt="{{first_name}}" style="width: 80%; height: auto; padding: 10px;">
+        {{#if is_user}}
+        <div class="card-body">
+          <h5 class="card-title">Update Profile Picture</h5>
+          <form action="/upload" method="post" enctype="multipart/form-data" id="add-image-form">
+            <div class="form-group">
+              <label for="profile-image">Choose a file</label>
+              <input type="file" class="form-control-file" id="profile-image" name="profile_image" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Save</button>
+          </form>
+        </div>
+        {{/if}}
+      </div>
     </div>
   </div>
-</div>
-
-
 
 
     <!-- Nav tabs -->
@@ -189,6 +200,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </body>
 
