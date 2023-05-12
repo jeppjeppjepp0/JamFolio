@@ -16,7 +16,8 @@
     <!-- Image Upload Section -->
     <div class="col-md-3">
       <div class="card">
-        <img src={{profile_url}} class="card-img-top rounded-circle mx-auto d-block" alt="{{first_name}}" style="width: 80%; height: auto; padding: 10px;">
+        <img src={{profile_url}} class="card-img-top rounded-circle mx-auto d-block" alt="{{first_name}}"
+          style="width: 80%; height: auto; padding: 10px;">
         {{#if is_user}}
         <div class="card-body">
           <h5 class="card-title">Update Profile Picture</h5>
@@ -34,97 +35,101 @@
   </div>
 
 
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" id="profileTabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <a class="nav-link active" id="songs-tab" data-bs-toggle="tab" href="#songs" role="tab" aria-controls="songs"
-          aria-selected="true">Songs</a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="instruments-tab" data-bs-toggle="tab" href="#instruments" role="tab"
-          aria-controls="instruments" aria-selected="false">Instruments</a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="gigs-tab" data-bs-toggle="tab" href="#gigs" role="tab" aria-controls="gigs"
-          aria-selected="false">Gigs</a>
-      </li>
-    </ul>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" id="profileTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="songs-tab" data-bs-toggle="tab" href="#songs" role="tab" aria-controls="songs"
+        aria-selected="true">Songs</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="instruments-tab" data-bs-toggle="tab" href="#instruments" role="tab"
+        aria-controls="instruments" aria-selected="false">Instruments</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="gigs-tab" data-bs-toggle="tab" href="#gigs" role="tab" aria-controls="gigs"
+        aria-selected="false">Gigs</a>
+    </li>
+  </ul>
 
-    <!-- Tab panes -->
-    <div class="tab-content mt-4">
-      <!-- Songs -->
-      <div class="tab-pane active" id="songs" role="tabpanel" aria-labelledby="songs-tab">
-        {{#if is_user}}
-        <form id="add-song-form" enctype="multipart/form-data">
+  <!-- Tab panes -->
+  <div class="tab-content mt-4">
+    <!-- Songs -->
+    <div class="tab-pane active" id="songs" role="tabpanel" aria-labelledby="songs-tab">
+      {{#if is_user}}
+      <form id="add-song-form" enctype="multipart/form-data">
         <h4 class="mb-3">Add a song</h4>
 
         <div class="form-group">
-            <label for="song-name">Song Name</label>
-            <input type="text" class="form-control" id="song-name" placeholder="Song name" name="song_name" required>
+          <label for="song-name">Song Name</label>
+          <input type="text" class="form-control" id="song-name" placeholder="Song name" name="song_name" required>
         </div>
 
         <div class="form-group">
-            <label for="genre">Genre</label>
-            <input type="text" class="form-control" id="genre" placeholder="Genre" name="genre">
+          <label for="genre">Genre</label>
+          <input type="text" class="form-control" id="genre" placeholder="Genre" name="genre">
         </div>
 
         <div class="form-group">
-            <label for="song-description">Song Description</label>
-            <input type="text" class="form-control" id="song-description" placeholder="Song description" name="song_description">
+          <label for="song-description">Song Description</label>
+          <input type="text" class="form-control" id="song-description" placeholder="Song description"
+            name="song_description">
         </div>
 
         <div class="form-group">
-            <label for="original-author">Original Author</label>
-            <input type="text" class="form-control" id="original-author" placeholder="Original author" name="original_author">
+          <label for="original-author">Original Author</label>
+          <input type="text" class="form-control" id="original-author" placeholder="Original author"
+            name="original_author">
         </div>
 
         <div class="form-group">
-            <label for="song-file">Upload Song</label>
-            <input type="file" class="form-control-file" id="song-file" name="song_file" accept="audio/*">
+          <label for="song-file">Upload Song</label>
+          <input type="file" class="form-control-file" id="song-file" name="song_file" accept="audio/*">
         </div>
 
         <button type="submit" class="btn btn-primary mt-2">Add Song</button>
-    </form>
-    {{/if}}
+      </form>
+      {{/if}}
 
-        <div class="row">
-          {{#each performed_songs}}
-          <div class="col-md-4">
-            <div class="card my-3">
-              <audio controls>
-                <source src="{{this.songs_url}}" type="audio/wav">
-                <source src="{{this.songs_url}}" type="audio/mp3">
-                Your browser does not support the audio element
-              </audio>
+      <div class="row">
+        {{#each performed_songs}}
+        <div class="col-md-4">
+          <div class="card my-3">
+            <audio controls>
+              <source src="{{this.songs_url}}" type="audio/wav">
+              <source src="{{this.songs_url}}" type="audio/mp3">
+              Your browser does not support the audio element
+            </audio>
 
-              <div class="card-body">
-                <h5 class="card-title">{{this.name}}</h5>
-                <p class="card-text">Genre: {{this.genre}}</p>
-                <p class="card-text">Description: {{this.description}}</p>
-                <p class="card-text">Original Author: {{this.original_author}}</p>
-              </div>
+            <div class="card-body">
+              <h5 class="card-title">{{this.name}}</h5>
+              <p class="card-text">Genre: {{this.genre}}</p>
+              <p class="card-text">Description: {{this.description}}</p>
+              <p class="card-text">Original Author: {{this.original_author}}</p>
             </div>
           </div>
-          {{/each}}
         </div>
+        {{/each}}
       </div>
+    </div>
 
-      <!-- Instruments -->
-      <div class="tab-pane" id="instruments" role="tabpanel" aria-labelledby="instruments-tab">
-        <div class="tab-pane active" id="instrument" role="tabpanel" aria-labelledby="instruments-tab">
-          {{#if is_user}}
+    <!-- Instruments -->
+    <div class="tab-pane" id="instruments" role="tabpanel" aria-labelledby="instruments-tab">
+      <div class="tab-pane active" id="instrument" role="tabpanel" aria-labelledby="instruments-tab">
+        {{#if is_user}}
         <form id="add-instrument-form" enctype="multipart/form-data">
-        <h4 class="mb-3">Add an instrument</h4>
+          <h4 class="mb-3">Add an instrument</h4>
 
           <div class="form-group">
             <label for="instrument-name">Instrument Name</label>
-            <input type="text" class="form-control" id="instrument-name" placeholder="Instrument name" name="instrument_name" required>
-        </div>
-        <div class="form-group">
+            <input type="text" class="form-control" id="instrument-name" placeholder="Instrument name"
+              name="instrument_name" required>
+          </div>
+          <div class="form-group">
             <label for="instrument-description">Description</label>
-            <input type="text" class="form-control" id="instrument-description" placeholder="Instrument description" name="instrument_description" required>
-        </div>
-        <button type="submit" class="btn btn-primary mt-2">Add Instrument</button>
+            <input type="text" class="form-control" id="instrument-description" placeholder="Instrument description"
+              name="instrument_description" required>
+          </div>
+          <button type="submit" class="btn btn-primary mt-2">Add Instrument</button>
         </form>
         {{/if}}
 
@@ -142,47 +147,50 @@
           {{/each}}
         </div>
       </div>
-      </div>
-      {{!-- Gigs --}}
-      <div class="tab-pane" id="gigs" role="tabpanel" aria-labelledby="gigs-tab">
-              <div class="tab-pane active" id="gigs" role="tabpanel" aria-labelledby="gigs-tab">
+    </div>
+    {{!-- Gigs --}}
+    <div class="tab-pane" id="gigs" role="tabpanel" aria-labelledby="gigs-tab">
+      <div class="tab-pane active" id="gigs" role="tabpanel" aria-labelledby="gigs-tab">
         {{#if is_user}}
         <form id="add-gig-form" enctype="multipart/form-data">
-        <h4 class="mb-3">Add a gig</h4>
+          <h4 class="mb-3">Add a gig</h4>
 
-        <div class="form-group">
+          <div class="form-group">
             <label for="gig-name">Gig Name</label>
             <input type="text" class="form-control" id="gig-name" placeholder="Gig name" name="gig_name" required>
-        </div>
+          </div>
 
-        <div class="form-group">
+          <div class="form-group">
             <label for="location">Location</label>
             <input type="text" class="form-control" id="location" placeholder="Location" name="location">
-        </div>
+          </div>
 
-        <div class="form-group">
+          <div class="form-group">
             <label for="gig-date">Date</label>
-            <input type="text" class="form-control" id="gig-date" placeholder="Date of gig" name="gig-date">
-        </div>
+            <input type="date" class="form-control" id="gig-date" name="date" required>
+          </div>
 
-        <div class="form-group">
+
+          <div class="form-group">
             <label for="gig-capacity">Capacity</label>
-            <input type="text" class="form-control" id="gig-capacity" placeholder="Capacity" name="gig-capacity">
-        </div>
+            <input type="number" class="form-control" id="gig-capacity" placeholder="Capacity" name="capacity">
+          </div>
 
-        <div class="form-group">
+          <div class="form-group">
             <label for="admission">Admission price</label>
-            <input type="text" class="form-control" id="admission" placeholder="Admission price" name="admission">
-        </div>
+            <input type="number" step="0.01" class="form-control" id="admission" placeholder="Admission price"
+              name="admission">
+          </div>
 
-        <div class="form-group">
+          <div class="form-group">
             <label for="gig-description">Description</label>
-            <input type="text" class="form-control" id="gig-description" placeholder="Description" name="gig-description">
-        </div>
+            <input type="text" class="form-control" id="gig-description" placeholder="Description"
+              name="gig-description">
+          </div>
 
-        <button type="submit" class="btn btn-primary mt-2">Add Gig</button>
-    </form>
-    {{/if}}
+          <button type="submit" class="btn btn-primary mt-2">Add Gig</button>
+        </form>
+        {{/if}}
         <div class="row">
           {{#each gigs}}
           <div class="col-md-4">
@@ -193,6 +201,8 @@
                 <p class="card-text">Details: {{this.description}}</p>
                 <p class="card-text">Location: {{this.location}}</p>
                 <p class="card-text">Date: {{this.date}}</p>
+                <p class="card-text">Capacity: {{this.capacity}}</p>
+                <p class="card-text">Admission Fee: {{this.admission}}</p>
               </div>
             </div>
           </div>
@@ -201,7 +211,7 @@
       </div>
     </div>
   </div>
-  </div>
+</div>
 </body>
 
 <script src="/js/profile.js"></script>
