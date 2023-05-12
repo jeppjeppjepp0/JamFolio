@@ -18,7 +18,8 @@ router.post('/add-gig', async (req, res) => {
         date: date,
         capacity: capacity,
         admission: admission,
-        description: gig_description
+        description: gig_description,
+       
         // musician_id: musician_id,
       });
   
